@@ -1,7 +1,7 @@
 def competition(team1,team2,team1_num,team2_num,
                 score_1,score_2,team1_time,team2_time ):
-    team1_score = dict(zip([team1],[score_1]))
-    team2_score = dict(zip([team2], [score_2]))
+    # team1_score = dict(zip([team1],[score_1]))
+    # team2_score = dict(zip([team2], [score_2]))
     tasks_total = score_1 + score_2
     time_avg = (team2_time + team1_time) / tasks_total
     print("В команде Мастера кода участников: %s ! " % team1_num)
@@ -11,7 +11,7 @@ def competition(team1,team2,team1_num,team2_num,
     print(f"Команды решили {score_1} и {score_2} задач.")
     if score_1 > score_2 or score_1 == score_2 and team1_time > team2_time:
         result = 'Победа команды Мастера кода!'
-        print()
+        print(f'Результат битвы: {result}')
     elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
         result = 'Победа команды Волшебники Данных!'
         print(f'Результат битвы: {result}')
